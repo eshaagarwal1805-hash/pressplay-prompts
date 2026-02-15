@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Prompt Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        .container {
+            text-align: center;
+            background: #2d2d2d;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 90%;
+            width: 500px;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #ffcc00; }
+        #display {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px dashed #555;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #1a1a1a;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.1s, background 0.3s;
+        }
+        button:hover { background-color: #e6b800; }
+        button:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🕵️ Press Play Round 1</h1>
+    <div id="display">Click and reveal your destiny...</div>
+    <button onclick="generatePrompt()">GENERATE PROMPT</button>
+</div>
+
+<script>
+    const prompts = [
+        "⚽ → broken trophy → school gymnasium",
+        "⚡ → melted circuit board → power plant control room",
+        "🎰 → counterfeit chip → casino surveillance room",
+        "🌋 → ash-covered diary → disaster zone",
+        "🔬 → contaminated test tube → quarantine facility",
+        "📡 → encrypted hard drive → radio telescope station",
+        "💀 → ancient coin → archaeological dig site",
+        "🧬 → blood-stained glove → genetic research facility",
+        "🌑 → broken telescope lens → space observation center",
+        "⚰️ → mysterious letter → funeral home basement",
+        "🗿 → forged certificate → black market auction",
+        "🧪 → explosive residue → underground lab",
+        "📸 → fingerprint evidence → crime scene",
+        "🦋 → poison vial → natural history museum",
+        "💎 → authentication report → jewelry exhibition",
+        "🏆 → performance-enhancing drugs → sports stadium",
+        "🚓 → witness statement → crime scene",
+        "🎨 → security footage → art museum",
+        "📊 → insider trading document → stock exchange",
+        "💰 → winning stub → convenience store",
+        "🎬 → leaked script → red carpet",
+        "🏥 → expired shipment → health clinic",
+        "📢 → arrest warrant → protest rally",
+        "🌪️ → missing person report → tornado aftermath",
+        "💳 → skimming device → ATM machine",
+        "💍 → security blueprint → diamond district",
+        "📡 → intercepted transmission → spy headquarters",
+        "🎯 → security footage → political rally",
+        "🌋 → seismic warning → volcanic town",
+        "🔬 → clinical trial data → cancer research lab",
+        "🔓 → stolen password list → tech company headquarters",
+        "🗳️ → ballot box → election commission office",
+        "🏭 → contaminated water sample → factory dumping ground",
+        "🌊 → dead wildlife → coastal wildlife sanctuary",
+        "🌐 → malware code → national power grid",
+        "🚁 → flight recorder → plane crash site",
+        "🗂️ → USB drive → whistleblower’s apartment",
+        "🚨 → smoke detector → college hostel",
+        "🏆 → performance-enhancing drugs → boxing ring",
+        "🎯 → intercepted intelligence → embassy compound"
+    ];
+
+    function generatePrompt() {
+        const display = document.getElementById('display');
+        const randomIndex = Math.floor(Math.random() * prompts.length);
+        display.innerText = prompts[randomIndex];
+    }
+</script>
+
+</body>
+</html>
